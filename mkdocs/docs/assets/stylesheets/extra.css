@@ -1,0 +1,12 @@
+/* Scale all images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
+
+/* Ensure toggle button is always visible if using Material theme */
+.md-header__button.md-icon {
+  display: inline-block;
+}

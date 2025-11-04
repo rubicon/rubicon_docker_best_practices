@@ -15,3 +15,6 @@ nav:
   - Compose Examples:
       - N8N: compose/n8n-compose.md
       - Sample: compose/docker-compose.md
+
+extra_css:
+  - assets/stylesheets/extra.css
