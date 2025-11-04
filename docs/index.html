@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rubicon Docker Best Practices</title>
   <style>
     :root {
-      color-scheme: light dark;
       --bg-light: #ffffff;
       --bg-dark: #1e1e1e;
       --text-light: #000000;
       --text-dark: #ffffff;
       --accent: #007acc;
     }
+    html[data-theme='light'] {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+    html[data-theme='dark'] {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
     body {
       margin: 0;
       padding: 2rem;
       font-family: system-ui, sans-serif;
-      background-color: var(--bg-light);
-      color: var(--text-light);
-      transition: all 0.2s ease-in-out;
-    }
-    [data-theme='dark'] {
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     }
     h1 {
       font-size: 2.5rem;

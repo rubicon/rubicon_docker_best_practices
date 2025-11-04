@@ -1,0 +1,13 @@
+site_name: Rubicon Docker Best Practices
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: indigo
+nav:
+  - Home: index.md
+  - Docker Compose Guide: docker_compose_best_practices.md
+  - Synology FAQ: synology_faq.md
+  - Compose Examples:
+      - N8N: compose/n8n-compose.md
+      - Sample: compose/docker-compose.md

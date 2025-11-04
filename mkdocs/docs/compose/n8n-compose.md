@@ -1,0 +1,37 @@
+```yaml
+version: "3.9"
+
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: n8n
+    restart: unless-stopped
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=n8nuser
+      - N8N_BASIC_AUTH_PASSWORD=n8npassword
+      - N8N_HOST=localhost
+    ports:
+      - "5678:5678"
+    volumes:
+      - type: bind
+        source: /volume2/docker/n8n
+        target: /home/node/.n8n
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5678/healthz || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    labels:
+      - org.opencontainers.image.title="n8n"
+      - org.opencontainers.image.description="Workflow automation tool"
+      - org.opencontainers.image.source="https://github.com/n8n-io/n8n"
+      - org.opencontainers.image.documentation="https://docs.n8n.io"
+      - org.opencontainers.image.url="https://hub.docker.com/r/n8nio/n8n"
+      - org.opencontainers.image.version="latest"
+
+```

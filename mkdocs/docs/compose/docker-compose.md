@@ -1,0 +1,28 @@
+```yaml
+version: "3.9"
+
+services:
+  sample-app:
+    image: nginx:alpine
+    container_name: sample-nginx
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /etc/localtime
+        target: /etc/localtime
+        read_only: true
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    labels:
+      - org.opencontainers.image.title="Nginx Alpine Sample"
+      - org.opencontainers.image.version="alpine"
+
+```
