@@ -1,0 +1,9 @@
+# Docker ignore and OS cruft
+.env
+*.log
+*.pid
+__pycache__/
+.DS_Store
+*.swp
+.idea/
+.vscode/
