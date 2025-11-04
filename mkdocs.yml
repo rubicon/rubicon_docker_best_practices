@@ -4,6 +4,10 @@ theme:
   palette:
     primary: indigo
     accent: indigo
+    toggle:
+      icon: material/weather-night
+      name: Switch to dark mode
+      persist: true
 nav:
   - Home: index.md
   - Docker Compose Guide: docker_compose_best_practices.md
