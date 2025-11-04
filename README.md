@@ -1,16 +1,19 @@
 # 🐳 Rubicon Docker Compose Best Practices (Synology DSM 7+)
 
-![Docker Compose CI](https://github.com/rubicon/rubicon_docker_best_practices/actions/workflows/docker-compose-ci.yml/badge.svg)
+![CI](https://github.com/rubicon/rubicon_docker_best_practices/actions/workflows/docker-compose-ci.yml/badge.svg)
+![MkDocs Deploy](https://github.com/rubicon/rubicon_docker_best_practices/actions/workflows/deploy-mkdocs.yml/badge.svg)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-green?logo=github)](https://rubicon.github.io/rubicon_docker_best_practices/)
 
 This repository contains a hardened, production-ready Docker Compose best practices guide specifically tailored for Synology DSM 7.2+ environments.
 
-📘 **Live GitHub Pages**:  
+📘 **Live Docs**:  
 🔗 [https://rubicon.github.io/rubicon_docker_best_practices/](https://rubicon.github.io/rubicon_docker_best_practices/)
 
 ## 📁 Contents
 
 - `docker_compose_best_practices.md` – Full Markdown Guide
 - `docker_compose_best_practices.pdf` – Printable PDF Version
+- `mkdocs/` – Structured documentation site with navigation and search
 
 ## 📦 Use Cases
 
@@ -29,7 +32,9 @@ This repository contains a hardened, production-ready Docker Compose best practi
 
 ## 🧪 CI Integration
 
-This repo uses GitHub Actions to lint and validate Docker Compose configuration.
+This repo uses:
+- GitHub Actions for Compose validation (`docker-compose-ci.yml`)
+- MkDocs for auto-deployed documentation (`deploy-mkdocs.yml`)
 
 ## 🤝 Contributing
 
