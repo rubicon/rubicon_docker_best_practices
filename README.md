@@ -1,6 +1,6 @@
-![Docker Compose CI](https://github.com/yourusername/docker_best_practices/actions/workflows/docker-compose-ci.yml/badge.svg)
+# 🐳 Rubicon Docker Compose Best Practices (Synology DSM 7+)
 
-# 🐳 Dax's Docker Compose Best Practices (Synology DSM 7+)
+![Docker Compose CI](https://github.com/daxdavis/rubicon_docker_best_practices/actions/workflows/docker-compose-ci.yml/badge.svg)
 
 This repository contains a hardened, production-ready Docker Compose best practices guide specifically tailored for Synology DSM 7.2+ environments.
 
@@ -23,6 +23,10 @@ This repository contains a hardened, production-ready Docker Compose best practi
 - Healthchecks, labels, restart policies
 - Hardware acceleration for Intel Quick Sync
 - Safe networking strategies (host vs bridge)
+
+## 🧪 CI Integration
+
+This repo uses GitHub Actions to lint and validate Docker Compose configuration.
 
 ## 📄 Licensing
 
