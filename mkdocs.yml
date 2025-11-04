@@ -1,13 +1,29 @@
 site_name: Rubicon Docker Best Practices
+
 theme:
   name: material
   palette:
-    primary: indigo
-    accent: indigo
-    toggle:
-      icon: material/weather-night
-      name: Switch to dark mode
-      persist: true
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+        persist: true
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+        persist: true
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+
 nav:
   - Home: index.md
   - Docker Compose Guide: docker_compose_best_practices.md
