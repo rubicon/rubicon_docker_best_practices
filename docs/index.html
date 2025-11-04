@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rubicon Docker Best Practices</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg-light: #ffffff;
+      --bg-dark: #1e1e1e;
+      --text-light: #000000;
+      --text-dark: #ffffff;
+      --accent: #007acc;
+    }
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: system-ui, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: all 0.2s ease-in-out;
+    }
+    [data-theme='dark'] {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-top: 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .links {
+      margin-top: 2rem;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1.1rem;
+    }
+    .toggle {
+      margin-top: 2rem;
+    }
+    button {
+      background: none;
+      border: 1px solid var(--accent);
+      color: inherit;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🐳 Rubicon Docker Best Practices</h1>
+    <p>A modern, Synology-optimized Docker Compose template with CI, Pages, and docs.</p>
+    <div class="links">
+      <a href="../docker_compose_best_practices.md" target="_blank">📄 Markdown Guide</a>
+      <a href="../docker_compose_best_practices.pdf" target="_blank">📘 Download PDF</a>
+      <a href="https://github.com/rubicon/rubicon_docker_best_practices" target="_blank">🌐 GitHub Repo</a>
+    </div>
+    <div class="toggle">
+      <button onclick="toggleTheme()">🌓 Toggle Theme</button>
+    </div>
+  </div>
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    }
+  </script>
+</body>
+</html>
