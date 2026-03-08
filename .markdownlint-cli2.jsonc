@@ -1,0 +1,4 @@
+{
+  // Recognize YAML front matter so markdownlint skips it
+  "frontMatter": "^---\n[\\s\\S]*?\n---(?:\n|$)"
+}

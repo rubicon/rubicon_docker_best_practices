@@ -1,3 +1,5 @@
+# n8n Docker Compose
+
 ```yaml
 version: "3.9"
 
@@ -33,5 +35,4 @@ services:
       - org.opencontainers.image.documentation="https://docs.n8n.io"
       - org.opencontainers.image.url="https://hub.docker.com/r/n8nio/n8n"
       - org.opencontainers.image.version="latest"
-
 ```

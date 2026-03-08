@@ -1,0 +1,16 @@
+default: true
+
+# Line length — impractical to enforce in prose documentation
+MD013: false
+
+# Allow files with YAML front matter to not start with an H1
+MD041:
+  front_matter_title: ""
+
+# Don't treat front matter title field as an H1 (avoids false "multiple H1" errors)
+MD025:
+  front_matter_title: ""
+
+# Allow fenced code blocks inside list items without blank lines
+MD031:
+  list_items: false

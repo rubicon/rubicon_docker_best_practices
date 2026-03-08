@@ -1,3 +1,5 @@
+# Sample Docker Compose
+
 ```yaml
 version: "3.9"
 
@@ -24,5 +26,4 @@ services:
     labels:
       - org.opencontainers.image.title="Nginx Alpine Sample"
       - org.opencontainers.image.version="alpine"
-
 ```
