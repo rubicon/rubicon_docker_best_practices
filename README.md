@@ -33,6 +33,7 @@ This repository contains a hardened, production-ready Docker Compose best practi
 ## 🧪 CI Integration
 
 This repo uses:
+
 - GitHub Actions for Compose validation (`docker-compose-ci.yml`)
 - MkDocs for auto-deployed documentation (`deploy-mkdocs.yml`)
 

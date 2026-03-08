@@ -1,4 +1,5 @@
 site_name: Rubicon Docker Best Practices
+docs_dir: mkdocs/docs
 
 theme:
   name: material
