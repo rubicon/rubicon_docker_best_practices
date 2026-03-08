@@ -3,5 +3,5 @@
 *.md
 *.pdf
 env/
-docs/
+mkdocs/
 scripts/

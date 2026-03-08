@@ -1,10 +1,22 @@
-# Docker ignore and OS cruft
+# Environment
 .env
+
+# MkDocs build output
+site/
+
+# OS cruft
+.DS_Store
+*.swp
+
+# Python
 *.log
 *.pid
 __pycache__/
-.DS_Store
-*.swp
+
+# IDE
 .idea/
 .vscode/
-.DS_Store
+*.code-workspace
+
+# Claude local state
+.claude/
