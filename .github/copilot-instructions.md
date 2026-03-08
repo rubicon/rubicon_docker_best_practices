@@ -4,14 +4,14 @@ This repository is a documentation/reference project for Docker Compose best pra
 
 ## Getting started
 
-- **Docs** live under `mkdocs/docs/` and are published with MkDocs Material. The root config is `mkdocs.yml` which sets `docs_dir: mkdocs/docs` (nonstandard).
+- **Docs** live under `mkdocs/docs/` and are published with MkDocs Material. The root config is `mkdocs.yaml` which sets `docs_dir: mkdocs/docs` (nonstandard).
 - To work locally run:
   ```bash
   pip install mkdocs mkdocs-material      # one-time
   mkdocs serve                           # local live reload
-  mkdocs build --config-file mkdocs.yml  # build static site
+  mkdocs build --config-file mkdocs.yaml  # build static site
   ```
-- Docker Compose examples live in `compose/`. Every YAML file should have a corresponding documentation page in `mkdocs/docs/compose/` and must be added to the `nav` section of `mkdocs.yml` manually. MkDocs does **not** auto-discover pages.
+- Docker Compose examples live in `compose/`. Every YAML file should have a corresponding documentation page in `mkdocs/docs/compose/` and must be added to the `nav` section of `mkdocs.yaml` manually. MkDocs does **not** auto-discover pages.
 - Validate compose files before committing:
   ```bash
   docker compose -f compose/docker-compose.yaml config
@@ -32,13 +32,13 @@ This repository is a documentation/reference project for Docker Compose best pra
 ## CI/CD
 
 - Workflow files are in `.github/workflows/`:
-  - `deploy-mkdocs.yml` builds & deploys to GitHub Pages on push to `main`.
-  - `docker-compose-ci.yml` validates compose syntax on pushes/PRs.
+  - `deploy-mkdocs.yaml` builds & deploys to GitHub Pages on push to `main`.
+  - `docker-compose-ci.yaml` validates compose syntax on pushes/PRs.
 
 ## File structure overview
 
 ```
-mkdocs.yml              # MkDocs config
+mkdocs.yaml              # MkDocs config
 mkdocs/docs/            # documentation source
 compose/                # Docker Compose examples
 env/                    # environment templates
@@ -47,7 +47,7 @@ scripts/                # helper scripts (mostly docs)
 
 ## Tips for AI assistants
 
-1. When adding or editing docs, always update `mkdocs.yml` nav.
+1. When adding or editing docs, always update `mkdocs.yaml` nav.
 2. Preserve formatting and YAML examples exactly; the site renders code blocks.
 3. Use `docker compose config` to sanity‑check any changes to the YAML examples.
 4. There is no build/test target beyond docs and compose validation.

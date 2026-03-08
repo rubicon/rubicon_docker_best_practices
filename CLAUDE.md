@@ -18,10 +18,10 @@ pip install mkdocs mkdocs-material
 mkdocs serve
 
 # Build static site
-mkdocs build --config-file mkdocs.yml
+mkdocs build --config-file mkdocs.yaml
 ```
 
-> **Note:** `mkdocs.yml` must have `docs_dir: mkdocs/docs` set — MkDocs defaults to `docs/` at the repo root, which doesn't exist. Without this, both `serve` and `build` will fail.
+> **Note:** `mkdocs.yaml` must have `docs_dir: mkdocs/docs` set — MkDocs defaults to `docs/` at the repo root, which doesn't exist. Without this, both `serve` and `build` will fail.
 
 ### Validate compose files
 
@@ -32,14 +32,14 @@ docker compose -f compose/n8n-compose.yaml config
 
 ## Architecture
 
-**Documentation** lives in `mkdocs/docs/` and is configured via `mkdocs.yml` at the root. The navigation structure in `mkdocs.yml` must be updated whenever docs pages are added or removed — MkDocs doesn't auto-discover pages.
+**Documentation** lives in `mkdocs/docs/` and is configured via `mkdocs.yaml` at the root. The navigation structure in `mkdocs.yaml` must be updated whenever docs pages are added or removed — MkDocs doesn't auto-discover pages.
 
-**Compose examples** in `compose/` each have a corresponding doc page in `mkdocs/docs/compose/`. When adding a new compose example, create both the YAML in `compose/` and the documentation in `mkdocs/docs/compose/`, then add it to `mkdocs.yml` nav.
+**Compose examples** in `compose/` each have a corresponding doc page in `mkdocs/docs/compose/`. When adding a new compose example, create both the YAML in `compose/` and the documentation in `mkdocs/docs/compose/`, then add it to `mkdocs.yaml` nav.
 
 **CI/CD**: GitHub Actions in `.github/workflows/` handles:
 
-- `deploy-mkdocs.yml` — builds and deploys to GitHub Pages on push to `main`
-- `docker-compose-ci.yml` — validates compose file syntax on push/PR
+- `deploy-mkdocs.yaml` — builds and deploys to GitHub Pages on push to `main`
+- `docker-compose-ci.yaml` — validates compose file syntax on push/PR
 
 **Env template** at `env/.env.example` uses Synology-specific defaults (PUID=1026, PGID=65542).
 
